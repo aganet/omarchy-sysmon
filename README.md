@@ -3,6 +3,8 @@
 A small system monitor for the Omarchy bar. It shows CPU %, memory % and
 network speed in Mbps.
 
+![The widget in the Omarchy bar](preview.png)
+
 ```text
 󰻠 7%  󰍛 38%  ↓148.3 Mbps ↑12.1 Mbps
 ```
