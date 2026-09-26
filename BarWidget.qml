@@ -87,7 +87,8 @@ BarWidget {
     horizontalMargin: 7.5
     verticalPadding: 6
     onPressed: function(mouseButton) {
-      var command = String(root.setting("onClick", ""))
+      // Defaults from manifest.json are not merged into settings, so the fallback lives here.
+      var command = String(root.setting("onClick", "omarchy-launch-or-focus-tui btop"))
       if (command && root.bar) root.bar.run(command)
     }
   }
