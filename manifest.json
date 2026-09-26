@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "anegio.sysmon",
+  "name": "System monitor",
+  "version": "2.1.0",
+  "author": "anegio",
+  "license": "MIT",
+  "description": "CPU, memory and network rates read from /proc, with no subprocess",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "System monitor",
+    "description": "CPU %, memory % and network up/down rates",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "interval": 2,
+      "onClick": "omarchy-launch-or-focus-tui btop"
+    },
+    "schema": [
+      {
+        "key": "interval",
+        "type": "integer",
+        "label": "Refresh interval (seconds)",
+        "min": 1,
+        "max": 60,
+        "step": 1,
+        "defaultValue": 2
+      },
+      {
+        "key": "onClick",
+        "type": "string",
+        "label": "Left-click command"
+      }
+    ]
+  }
+}
